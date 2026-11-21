@@ -21,3 +21,13 @@ variable "vm_name" {
   default     = "srvwin01"
   description = "Nome do servidor Windows no Azure"
 }
+variable "admin_username" {
+  type        = string
+  default     = "azureadmin"
+  description = "Usuario administrador local da Maquina Virtual"
+}
+variable "admin_password" {
+  type        = string
+  sensitive   = true
+  description = "Senha do administrador local da VM (fornecida via TF_VAR_admin_password ou prompt)"
+}
